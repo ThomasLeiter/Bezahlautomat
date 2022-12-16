@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MuenzVorrat.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MuenzVorrat.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="VorgangsDaten.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VorgangsDaten.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="MuenzVorrat.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MuenzVorrat.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="VorgangsDaten.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VorgangsDaten.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
